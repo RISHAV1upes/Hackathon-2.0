@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>Hackathon 2.0||UPES CSI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="shortcut icon" href="images/logo.png">
+		<script type = "text/javascript" src = "jquery-3.1.1.min.js"></script>
+		<script type = "text/javascript" src="js/scroll.js"></script>
+	    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	    <link rel="stylesheet" type="text/css" href="css/caption-hover.css" />
+        <link href="css/stylegallery.css" rel="stylesheet" type="text/css" media="all">
+         
+      <link rel="stylesheet" href="css/styletime.css">
+	  
+      <link rel="stylesheet" href="css/stylehackfinal.css">
+	<style>
+	.text {
+  text-align: center;
+  color:#fff;
+ /* font-size:50px;*/
+  font-family:OCR A Std;
+  /*margin-top:-1000px;*/
+ 
+}
+.text a{
+font-size:50px;}
+
+</style>
+	</head>
+	<body class="landing">
+		<style type="text/css">
+			@media  screen and (min-width:200px) {
+				#banner {
+					background-image: url("images/hack_bg.jpg");
+					position:;
+				}
+			}
+			@media  screen and (min-width: 800px) {
+				#banner {
+					background-image: url("images/hack_bg.jpg");
+				}
+			}
+		</style>
+		<div id="page-wrapper" style="font-weight: bold;">
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo">
+				<a href="#">
+					<img style="height:90%" src="images/upes.png">
+					<img style="height:100%;padding-left:30px;" src="images/logo.png">
+				</a></h1>
+				<nav id="nav">
+					<ul style="text-transform: uppercase;">
+						<li><a href="#lone" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">About</a></li>
+						<li><a href="#lthree" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Prizes</a></li>
+						<li><a href="#lfour" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Location</a></li>
+						<li><a href="#lfive" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Fee</a></li>
+						<li><a href="#ltwo" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Rules</a></li>
+						<li><a href="#lsix" style="font-size:17px;color:white;font-family:OCR A Std;font-weight:100;text-decoration:none;"onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Gallery</a></li>
+						
+						<!--<li><a href="#lsix">Domains</a></li>-->
+						
+						</ul>
+				</nav>
+			</header>
+			<!-- Banner -->
+			<section id="banner" style="">
+			<div class="text hidden-md hidden-lg" style="margin-top:-600px">
+                           <h1>
+                                <a href="" class="typewrite"  data-period="2000" data-type='[ "Hackathon 2.0" ]'>
+                                <span class="wrap"></span>
+                                </a>
+                            </h1>
+                        </div>
+  		            <!---laptop mode---------->
+			<div id="" class="hidden-xs hidden-sm" style="margin-top:-680px;">
+				<div id="ui">
+					<img src="images/hackathon_logo.png" height="350" alt="">
+					
+				</div>
+			</div>
+			<div id="clockdiv" class="hidden-xs hidden-sm" style="margin-top:-50px;">
+				<div>
+					<span class="days" id="day"></span>
+					<div class="smalltext">Days</div>
+				</div>
+				<div>
+					<span class="hours" id="hrs"></span>
+					<div class="smalltext">Hours</div>
+				</div>
+				<div>
+					<span class="minutes" id="min"></span>
+					<div class="smalltext">Mins</div>
+				</div>
+				<div>
+					<span class="seconds" id="sec"></span>
+					<div class="smalltext">Sec</div>
+				</div>
+
+			</div>
+	                   <!--<a href="index1.html">Theme
+	                   </a>-->
+			<div id="clockdiv" class="hidden-md hidden-lg" style="">
+				<div>
+					<span class="days" id="dayxs"></span>
+					<div class="smalltext">Days</div>
+				</div>
+				<div>
+					<span class="hours" id="hrsxs"></span>
+					<div class="smalltext">Hours</div>
+				</div>
+				<div>
+					<span class="minutes" id="minxs"></span>
+					<div class="smalltext">Mins</div>
+				</div>
+				<div>
+					<span class="seconds" id="secxs"></span>
+					<div class="smalltext">Sec</div>
+				</div>
+
+			</div>
+		<!--	<div style="position:relative;bottom:20px;">
+	<input type="button" class="button1" href="http://www.google.co.in" id="button1" name="button" value="THEMES COMING SOON"/>
+</div>-->
+
+
+
+			<!---end laptop mode-->
+
+			<script>
+				var TxtType = function(el, toRotate, period) {
+					this.toRotate = toRotate;
+					this.el = el;
+					this.loopNum = 0;
+					this.period = parseInt(period, 10) || 2000;
+					this.txt = '';
+					this.tick();
+					this.isDeleting = false;
+				};
+
+				TxtType.prototype.tick = function() {
+					var i = this.loopNum % this.toRotate.length;
+					var fullTxt = this.toRotate[i];
+
+					if (this.isDeleting) {
+						this.txt = fullTxt.substring(0, this.txt.length - 1);
+					} else {
+						this.txt = fullTxt.substring(0, this.txt.length + 1);
+					}
+
+					this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+					var that = this;
+					var delta = 200 - Math.random() * 100;
+
+					if (this.isDeleting) {
+						delta /= 2;
+					}
+
+					if (!this.isDeleting && this.txt === fullTxt) {
+						delta = this.period;
+						this.isDeleting = true;
+					} else if (this.isDeleting && this.txt === '') {
+						this.isDeleting = false;
+						this.loopNum++;
+						delta = 500;
+					}
+
+					setTimeout(function() {
+						that.tick();
+					}, delta);
+				};
+
+				window.onload = function() {
+					var elements = document.getElementsByClassName('typewrite');
+					for (var i = 0; i < elements.length; i++) {
+						var toRotate = elements[i].getAttribute('data-type');
+						var period = elements[i].getAttribute('data-period');
+						if (toRotate) {
+							new TxtType(elements[i], JSON.parse(toRotate), period);
+						}
+					}
+					// INJECT CSS
+					var css = document.createElement("style");
+					css.type = "text/css";
+					css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+					document.body.appendChild(css);
+				};
+			</script>
+
+
+				<a href="#lone" class="goto-next scrolly" style="">Next</a>
+			</section>
+			<!-- One -->
+			<section id="lone" class="spotlight style1 intro bottom">
+				<span class="image fit main"><img src="images/code.png" alt="" /></span>
+				<div class="content">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u$(medium)">
+								<header style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+									<h3>“Ideas are responsible for the progression and prosperity of humans – without them we would still be living in prehistoric times.”</h3>
+									<br><p>Do you have an idea that could take the world way ahead of its time? Are you looking for the means to get the prototype of such an idea off the ground? Look no further. </p>
+								</header>
+							</div>
+							<div class="4u 12u$(medium)" style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+								<p>UPES-CSI is providing yet another opportunity for all the coders to rise and shine.Exercise your fingers because this February, the much-anticipated Hackathon is back.UPES-CSI proudly announces Hackathon 2.0! With an event time of 48 hours, prizes worth a whooping 50k and intern from splashBI and Data Couch, Hackathon 2.0 provides double the opportunity for all the programmers, web developers, hackers out there.</p>
+							</div>
+							<div class="4u$ 12u$(medium)" style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+								<p>Register, participate and stand a chance to earn an internship opportunity or get your work incubated by pioneers!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#ltwo" class="goto-next scrolly">Next</a>
+			</section>
+			<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 16, 2018 10:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	var daysxs = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hoursxs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesxs = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsxs = Math.floor((distance % (1000 * 60)) / 1000);
+	
+    // Output the result in an element with id="demo"
+    document.getElementById("day").innerHTML = days;
+   document.getElementById("hrs").innerHTML = hours ;
+   document.getElementById("min").innerHTML = minutes ;
+   document.getElementById("sec").innerHTML = seconds ;
+   
+    document.getElementById("dayxs").innerHTML = daysxs;
+   document.getElementById("hrsxs").innerHTML = hoursxs ;
+   document.getElementById("minxs").innerHTML = minutesxs ;
+   document.getElementById("secxs").innerHTML = secondsxs ;
+    
+}, 1000);
+//document.getElementById("day").innerHTML = 2 ;
+//document.getElementById("sec").innerHTML = 40 ;
+</script>
+
+			<!-- two -->
+			<!-- Three -->
+			<section id="lthree" class="spotlight style3 left">
+				<span class="image fit main bottom"><img src="images/award.jpg" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2 style="color:white;font-family:OCR A Std;font-weight:100;font-size:25px;">Prizes</h2>
+					</header>
+					<div>
+						<ul style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+							<li>Cash prizes, goodies and awards of distinction worth <span style="font-size: 1.2em; font-weight: bold;">INR 50,000</span>.</li>
+							<li>Exciting opportunities for internships and incubations of selected prototypes, by pioneers in the field.</li>
+							
+						</ul>
+					</div>
+				</div>
+				<a href="#lfour" class="goto-next scrolly">Next</a>
+			</section>
+			<!-- four -->
+			<section id="lfour" class="spotlight style2 right">
+				<span class="image fit main bottom"><img src="images/venue.jpg" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2 style="color:white;font-family:OCR A Std;font-weight:100;font-size:25px;">Location</h2>
+						<br><p style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">Energy Block,
+						University of Petroleum and Energy Studies, Bidholi, Premnagar, Dehardun-248007</p>
+						<p style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">Dates - 16<sup>th</sup>17<sup>th</sup> and 18<sup>th</sup> February</p>
+						<p style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">Duration - 48 Hours</p>
+					</header>
+					<div class="google-maps">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.681491772241!2d77.96617271478836!3d30.41677738174836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d4890d7c1735%3A0x22d3ae324c238e3c!2sUniversity+of+Petroleum+and+Energy+Studies!5e0!3m2!1sen!2sin!4v1475524302853" width="550" height="400 frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+					</div>
+				</div>
+				<a href="#lfive" class="goto-next scrolly">Next</a>
+			</section>
+			<!-- five -->
+			<section id="lfive" class="spotlight style3 left">
+				<span class="image fit main bottom"><img src="images/fee.jpg" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2 style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:25px;">Registration Fee</h2><br>
+						<p style="font-weight:100;font-family:TimesNewRoman;font-size:20px;">Registration Fee: INR </p>
+						<ul style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+							<li>All participants are expected to register &amp; pay individually, irrespective of whether they choose to participate in a team or alone.</li>
+							<li>After successful registration, participants will receive a unique Participant ID by email. </li>
+							<li>Once all members of a team have registered and paid, they may inform the organisers about the team atleast day before of the Hackathon.</li>
+						</ul>
+					</header>
+				</div>
+				<a href="#lsix" class="goto-next scrolly">Next</a>
+			</section>
+			<section id="ltwo" class="spotlight style2 right">
+				<span class="image fit main bottom"><img src="images/hackathon.jpg" alt="" /></span>
+				<div class="content">
+					<header style="margin-top: 3.5em">
+						<h2 style="color:white">Rules and Regulations</h2>
+					</header>
+					<ul style="color:white;font-family:TimesNewRoman;font-weight:100;font-size:20px;">
+						<li>A team can have a minimum of 1 and a maximum of 4 members.</li>
+						<li>The hackathon is open to everyone - college students and graduates alike.</li>
+						<li>Requirements: Valid ID Proof, laptops, chargers and other hardware equipments required to complete your hack.</li>
+						
+						<li>Judging criteria: Originality of the idea, design, functionality and implementation of the idea in a real time scenario. Judging is based on the software only (web/mobile app and software hack).</li>
+						<li style="font-weight: bold">
+							Deadline for registrations and payments - 11:59 AM, 13<sup>th</sup> Feb 2018
+						</li>
+					</ul>
+				</div>
+				<a href="#lthree" class="goto-next1 scrolly" style="">Next</a>
+			</section>
+			<style type="text/css">
+				.domain {
+					margin-bottom: 30px;
+				}
+				.domain h2 {
+					text-align: center;
+					margin-top: 30px;
+					margin-bottom: 0.5em;
+					line-height: 1em;
+				}
+				.domain h4 {
+					text-align: center;
+					height: 3em;
+					font-size: 14px;
+				}
+			</style>
+			<style>
+				.disabled
+				{
+					pointer-events: none;
+				}
+				#ltwo .content
+				{
+					padding:1.25em 1em;
+				}
+				#ltwo header h2
+				{
+					margin-bottom:0.25em;
+				}
+				#leight
+				{
+					background-color: white;
+					color: #1c1d26 !important;
+				}
+				.mygrey
+				{
+					color: #1c1d26 !important;
+				}
+				#leight div.row
+				{
+					color: #1c1d26;
+				}
+			</style>
+			<!--gallery-->
+			   <section class="our-blog" id="blog">
+	<h3 class="text-center slideanim" id="lsix">Gallery</h3>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog1.jpg" alt="" style="height:245px;width:250px;"class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Hackathon 1.0</h5>
+                        <p> </p>
+					</div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog2.jpg" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Inauguration Dance</h5>
+                        <p>Yugmak 2017</p>
+					</div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog3.jpg" alt="" style="height:250px;" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>CSR Activity</h5>
+                        <p></p>
+					
+                    </div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog4.jpg" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Inauguration Ceremony</h5>
+                        <p>Richa Choudhary,Faculty Coordinator</p>
+					</div>
+                </div>
+			</div></div>
+			<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog5.jpg" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Code Runner event </h5>
+                        <p>Yugmak 2016 </p>
+					</div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog6.jpg" alt="" style="height:245px;width:350px;"class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Hackathon 1.0 </h5>
+                        <p>Winners</p>
+					</div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog7.jpg" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Inter School IT Quiz</h5>
+                        <p></p>
+					
+                    </div>
+                </div>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="view view-seventh slideanim">
+                    <img src="images/blog8.jpg" alt="" class="img-responsive"/>
+                    <div class="mask">
+                        <h5>Freshman Orientation</h5>
+                        <p></p>
+					</div>
+                </div>
+			</div></div>
+		</div>
+			
+</section>
+<!-- /Blog -->
+
+<script>
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+</script>
+
+			<!--gallery end-->
+				<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/upescsi" target="_blank" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/upescsi" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/upescsi" target="_blank" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="http://blog.upescsi.in" target="_blank" class="icon alt fa-medium"><span class="label">Medium</span></a></li>
+					<li><a href="https://www.youtube.com/user/TheYugmaK" target="_blank" class="icon alt fa-youtube"><span class="label">Youtube</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>©UPES-CSI. All Rights Reserved</li>
+				</ul>
+			</footer>
+			
+			
+		</div>
+		<!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+         <script src="js/jqueryvelocity.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>
